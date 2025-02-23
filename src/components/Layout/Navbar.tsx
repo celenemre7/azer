@@ -14,16 +14,18 @@ export default function Navbar() {
         <nav className="bg-white shadow-lg border-b border-gray-100 z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
                 {/* Logo / Marka */}
-                <div className="flex items-center space-x-3">
-                    <img
-                        src="/logo.png"
-                        alt="MescidApp Logo"
-                        className="h-10 w-10 object-contain"
-                    />
-                    <span className="font-bold text-2xl text-green-800 tracking-wide">
-                        Mescid.az
-                    </span>
-                </div>
+                <Link href="/">
+                    <div className="flex items-center space-x-3 cursor-pointer">
+                        <img
+                            src="/logo.png"
+                            alt="MescidApp Logo"
+                            className="h-10 w-10 object-contain"
+                        />
+                        <span className="font-bold text-2xl text-green-800 tracking-wide">
+                            Mescid.az
+                        </span>
+                    </div>
+                </Link>
 
                 {/* Hamburger Icon (Mobile Only) */}
                 <button
