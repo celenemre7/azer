@@ -47,10 +47,12 @@ export default function HeroSection() {
 
                     {/* Description with Enhanced Typography */}
                     <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-medium drop-shadow-lg animate-fade-in-up [animation-delay:400ms]">
-                        Namaz vaxtlarını <span className="text-emerald-300 font-semibold">dəqiq</span> izləyin,{' '}
-                        <span className="text-emerald-300 font-semibold">qiblə</span> istiqamətini ani tapın və{' '}
-                        <span className="text-emerald-300 font-semibold">məscidləri</span> asanlıqla kəşf edin.
-                    </p>
+    Namaz vaxtlarını <span className="text-emerald-300 font-semibold">gecikdirməyin</span>,{' '}
+    <span className="text-emerald-300 font-semibold">dəqiq</span> qiblə istiqamətini və{' '}
+    <span className="text-emerald-300 font-semibold">namaz qılmaq</span> üçün ən yaxın məscidi saniyələr ərzində tapın.
+</p>
+
+
 
                     {/* Enhanced CTA Buttons with Bottom Spacing */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-5 animate-fade-in-up [animation-delay:600ms] mb-24 md:mb-24 lg:mb-32">

@@ -28,8 +28,8 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-emerald-900 mb-1">E-poçt</h4>
-                                        <a href="mailto:info@mescid.az" className="text-emerald-600 hover:text-emerald-700 transition-colors">
-                                            info@mescid.az
+                                        <a href="mailto:xeritechi@gmail.com" className="text-emerald-600 hover:text-emerald-700 transition-colors">
+                                            xeritechi@gmail.com
                                         </a>
                                     </div>
                                 </div>
@@ -64,7 +64,11 @@ export default function Contact() {
                         <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-lg shadow-emerald-100/50 border border-emerald-50">
                             <h2 className="text-3xl font-bold text-emerald-900 mb-8">Mesaj Göndər</h2>
 
-                            <form className="space-y-6">
+                            <form 
+                                action="https://formspree.io/f/xeoewegq" 
+                                method="POST" 
+                                className="space-y-6"
+                            >
                                 <div className="grid gap-6 sm:grid-cols-2">
                                     <div className="space-y-2">
                                         <label htmlFor="name" className="text-sm font-medium text-emerald-900/90">
@@ -73,6 +77,7 @@ export default function Contact() {
                                         <input
                                             type="text"
                                             id="name"
+                                            name="name"
                                             placeholder="Adınızı daxil edin"
                                             className="w-full px-4 py-3 rounded-lg border border-emerald-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200/50 transition-all outline-none"
                                             required
@@ -86,6 +91,7 @@ export default function Contact() {
                                         <input
                                             type="email"
                                             id="email"
+                                            name="email"
                                             placeholder="E-poçt ünvanınızı daxil edin"
                                             className="w-full px-4 py-3 rounded-lg border border-emerald-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200/50 transition-all outline-none"
                                             required
@@ -99,6 +105,7 @@ export default function Contact() {
                                     </label>
                                     <textarea
                                         id="message"
+                                        name="message"
                                         rows={5}
                                         placeholder="Mesajınızı buraya yazın..."
                                         className="w-full px-4 py-3 rounded-lg border border-emerald-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200/50 transition-all outline-none"

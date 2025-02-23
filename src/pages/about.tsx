@@ -157,7 +157,7 @@ const About: NextPage = () => {
                                 href="https://wa.me/+994553004214"
                                 className="text-blue-600 hover:underline font-semibold"
                             >
-                                WhatsApp +994 55 300 42 14
+                                +994 55 300 42 14
                             </a>
                         </p>
                     </div>

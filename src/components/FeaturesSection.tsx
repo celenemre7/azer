@@ -15,7 +15,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-creative';
 
-// Type Definitions (Değişmedi)
+// Type Definitions
 interface Feature {
     title: string;
     image: string;
@@ -36,7 +36,7 @@ interface FeatureCardProps {
     onClick: (index: number) => void;
 }
 
-// Custom Hook for Swiper Control (Değişmedi)
+// Custom Hook for Swiper Control
 const useSwiperControl = () => {
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -53,7 +53,7 @@ const useSwiperControl = () => {
     };
 };
 
-// Optimized Feature Card Component (Değişmedi)
+// Optimized Feature Card Component
 const FeatureCard = memo(({ feature, index, isActive, onClick }: FeatureCardProps) => (
     <article
         onClick={() => onClick(index)}
@@ -98,8 +98,7 @@ const FeatureCard = memo(({ feature, index, isActive, onClick }: FeatureCardProp
     </article>
 ));
 
-// Enhanced Swiper Component (Slider üzerinde text olmadan)
-
+// Enhanced Swiper Component
 const FeaturesSlider = ({ features, activeIndex, onSlideChange }: FeaturesSliderProps) => {
     const [swiper, setSwiper] = useState<SwiperType | null>(null);
 
@@ -164,15 +163,17 @@ const FeaturesSlider = ({ features, activeIndex, onSlideChange }: FeaturesSlider
         </div>
     );
 };
-// Yeni Konum Yönetim Paneli Bileşeni (Her zaman görünür)
+
+// Yeni Konum Yönetim Paneli Bileşeni
 const LocationActions = () => (
     <div className="mt-8 p-8 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-3xl shadow-2xl backdrop-blur-xl border border-white/10 hover:border-emerald-400/30 transition-all duration-500 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex-1">
             <h3 className="text-2xl font-semibold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-3">
-                Konum Yönetimi
+                Xəritəyə əlavə et
             </h3>
             <p className="text-gray-300 leading-relaxed max-w-2xl">
-                Haritada yeni məscid əlavə etmək və ya mövcud konumu düzəliş etmək üçün WhatsApp dəstək xəttimizlə əlaqə saxlayın.
+                Xəritəyə yeni məscid və namaz otağı əlavə etmək və ya mövcud ibadət yerlərində düzəliş etmək üçün 
+                WhatsApp nömrəmizə konumu göndərməyiniz və ya düzəliş haqqında məlumat verməyiniz kifayətdir.
             </p>
         </div>
         <a
@@ -192,7 +193,7 @@ const LocationActions = () => (
     </div>
 );
 
-// Main Component (Güncellendi)
+// Main Component
 const FeaturesSection = () => {
     const { swiperInstance, setSwiperInstance, activeIndex, handleSlideChange } = useSwiperControl();
 
@@ -359,6 +360,38 @@ const FeaturesSection = () => {
                                 <button className="p-1 hover:bg-white/10 rounded-lg">
                                     <span className="text-lg">→</span>
                                 </button>
+                            </div>
+                        ))}
+                    </div>
+                </>
+            )
+        },
+        {
+            title: 'Xüsusi Tədbirlər',
+            image: '/7.jpg',
+            gradient: ['#3f621ccc', '#166534cc'],
+            content: (
+                <>
+                    <div className="absolute top-4 left-4 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full text-sm text-white">
+                        Təqvim
+                    </div>
+                    <div className="space-y-4 w-full">
+                        {[
+                            { event: 'Təfsir dərsi', time: '19:00', location: 'Şəhidlər məscidi' },
+                            { event: 'Uşaq proqramı', time: '16:30', location: 'Mərkəzi məscid' },
+                            { event: 'Xeyriyyə iftarı', time: '18:45', location: 'Nardaran məscidi' }
+                        ].map((item, i) => (
+                            <div
+                                key={i}
+                                className="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                            >
+                                <div className="w-8 h-8 bg-emerald-400/20 rounded-lg flex items-center justify-center">
+                                    <span className="text-lg">📅</span>
+                                </div>
+                                <div className="flex-1">
+                                    <div className="text-sm text-white">{item.event}</div>
+                                    <div className="text-xs text-emerald-300">{item.time} - {item.location}</div>
+                                </div>
                             </div>
                         ))}
                     </div>

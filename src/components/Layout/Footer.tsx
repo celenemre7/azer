@@ -55,9 +55,9 @@ export default function Footer() {
 
     // İletişim Bilgileri (Phone eklendi)
     const contactInfo = [
-        { icon: <MapPin className="w-5 h-5" />, text: "Bakı, Azadlıq prospekti 123" },
+        { icon: <MapPin className="w-5 h-5" />, text: "Bakı, Azərbaycan" },
         { icon: <Clock className="w-5 h-5" />, text: "24/7 Elektron Dəstək" },
-        { icon: <Phone className="w-5 h-5" />, text: "+994 12 345 67 89" }
+        { icon: <Phone className="w-5 h-5" />, text: "+994 55 300 42 14" }
     ];
 
     return (
