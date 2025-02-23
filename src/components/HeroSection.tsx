@@ -47,22 +47,32 @@ export default function HeroSection() {
 
                     {/* Description with Enhanced Typography */}
                     <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-medium drop-shadow-lg animate-fade-in-up [animation-delay:400ms]">
-    Namaz vaxtlarını <span className="text-emerald-300 font-semibold">gecikdirməyin</span>,{' '}
-    <span className="text-emerald-300 font-semibold">dəqiq</span> qiblə istiqamətini və{' '}
-    <span className="text-emerald-300 font-semibold">namaz qılmaq</span> üçün ən yaxın məscidi saniyələr ərzində tapın.
-</p>
-
-
+                        Namaz vaxtlarını <span className="text-emerald-300 font-semibold">gecikdirməyin</span>,{' '}
+                        <span className="text-emerald-300 font-semibold">dəqiq</span> qiblə istiqamətini və{' '}
+                        <span className="text-emerald-300 font-semibold">namaz qılmaq</span> üçün ən yaxın məscidi saniyələr ərzində tapın.
+                    </p>
 
                     {/* Enhanced CTA Buttons with Bottom Spacing */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-5 animate-fade-in-up [animation-delay:600ms] mb-24 md:mb-24 lg:mb-32">
                         {[
-                            { os: 'iOS', store: 'App Store', icon: '/app-store.png' },
-                            { os: 'Android', store: 'Google Play', icon: '/play-store.png' }
+                            {
+                                os: 'iOS',
+                                store: 'App Store',
+                                icon: '/app-store.png',
+                                link: 'https://apps.apple.com/az/app/mescid-az-namaz-vaxtlar%C4%B1/id6741332172'
+                            },
+                            {
+                                os: 'Android',
+                                store: 'Google Play',
+                                icon: '/play-store.png',
+                                link: 'https://play.google.com/store/apps/details?id=app.prayertime.mescidaz&hl=az'
+                            }
                         ].map((item, index) => (
                             <a
                                 key={index}
-                                href="#download"
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="group relative bg-gradient-to-br from-white/5 to-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-2xl px-8 py-5 transition-all duration-300 hover:border-emerald-400/30 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-1 w-full sm:w-auto"
                             >
                                 <div className="flex items-center justify-center">

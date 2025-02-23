@@ -26,11 +26,14 @@ export default function Home() {
       {/* CTA Bölməsi: İstifadəçini tətbiqi yükləməyə çağırış */}
       <section className="relative bg-gradient-to-br from-green-900 to-green-800 py-24 overflow-hidden">
         {/* Dekorativ arxaplan elementi */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: 'url(/islamic-pattern.svg)',
-          backgroundSize: '320px',
-          backgroundRepeat: 'repeat'
-        }}></div>
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: 'url(/islamic-pattern.svg)',
+            backgroundSize: '320px',
+            backgroundRepeat: 'repeat'
+          }}
+        ></div>
 
         <div className="relative container mx-auto px-4 text-center">
           {/* Başlıq hissəsi */}
@@ -49,7 +52,9 @@ export default function Home() {
           {/* CTA Düymələri */}
           <div className="flex flex-wrap items-center justify-center gap-6 mt-12">
             <a
-              href="#"
+              href="https://apps.apple.com/az/app/mescid-az-namaz-vaxtlar%C4%B1/id6741332172"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-flex h-16 w-48 items-center justify-center rounded-xl bg-black/90 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-black/95"
             >
               <img
@@ -61,7 +66,9 @@ export default function Home() {
             </a>
 
             <a
-              href="#"
+              href="https://play.google.com/store/apps/details?id=app.prayertime.mescidaz&hl=az"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-flex h-16 w-48 items-center justify-center rounded-xl bg-black/90 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-black/95"
             >
               <img

@@ -103,7 +103,8 @@ const FeaturesSlider = ({ features, activeIndex, onSlideChange }: FeaturesSlider
     const [swiper, setSwiper] = useState<SwiperType | null>(null);
 
     return (
-        <div className="relative group mb-12 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-emerald-400/10 hover:shadow-emerald-400/20 transition-shadow duration-500">
+        // Container genişliği lg: breakpoint ile sınırlandırılıp merkezlendi.
+        <div className="relative group mb-12 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-emerald-400/10 hover:shadow-emerald-400/20 transition-shadow duration-500 w-full lg:w-[300px] lg:mx-auto">
             <Swiper
                 onSwiper={setSwiper}
                 modules={[Parallax, Navigation, Pagination, Controller, Autoplay, EffectCreative]}
@@ -125,11 +126,12 @@ const FeaturesSlider = ({ features, activeIndex, onSlideChange }: FeaturesSlider
                 autoplay={{ delay: 7000, disableOnInteraction: false }}
                 onSlideChangeTransitionEnd={(swiper) => onSlideChange(swiper.realIndex)}
                 className="!overflow-visible"
+                style={{ aspectRatio: '9/16' }} // 9:16 oranı korunuyor
             >
                 {features.map((feature, index) => (
                     <SwiperSlide key={index}>
                         <div
-                            className="relative w-full h-[600px] bg-gray-800 overflow-hidden flex items-center justify-center"
+                            className="relative w-full h-full bg-gray-800 overflow-hidden flex items-center justify-center"
                             style={{
                                 background: `linear-gradient(45deg, ${feature.gradient[0]}, ${feature.gradient[1]})`
                             }}
@@ -177,7 +179,7 @@ const LocationActions = () => (
             </p>
         </div>
         <a
-            href="https://wa.me/1234567890"
+            href="https://wa.me/994553004214"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 rounded-xl transition-all duration-300 group shadow-lg hover:shadow-emerald-400/20"
@@ -425,28 +427,26 @@ const FeaturesSection = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <div className="lg:col-span-1">
-                        <FeaturesSlider
-                            features={features}
-                            activeIndex={activeIndex}
-                            onSlideChange={handleSlideChange}
-                        />
-                    </div>
+                {/* Slider */}
+                <div className="mb-12">
+                    <FeaturesSlider
+                        features={features}
+                        activeIndex={activeIndex}
+                        onSlideChange={handleSlideChange}
+                    />
+                </div>
 
-                    <div className="lg:col-span-1">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
-                            {features.map((feature, index) => (
-                                <FeatureCard
-                                    key={index}
-                                    feature={feature}
-                                    index={index}
-                                    isActive={index === activeIndex}
-                                    onClick={handleCardClick}
-                                />
-                            ))}
-                        </div>
-                    </div>
+                {/* Feature Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {features.map((feature, index) => (
+                        <FeatureCard
+                            key={index}
+                            feature={feature}
+                            index={index}
+                            isActive={index === activeIndex}
+                            onClick={handleCardClick}
+                        />
+                    ))}
                 </div>
 
                 <LocationActions />
