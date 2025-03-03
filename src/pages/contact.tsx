@@ -34,21 +34,17 @@ export default function Contact() {
                                     </div>
                                 </div>
 
-<<<<<<< HEAD
-                                
-=======
                                 <div className="flex items-start gap-4">
                                     <div className="p-3 bg-emerald-100/50 rounded-lg">
                                         <PhoneIcon className="w-6 h-6 text-emerald-600" />
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-emerald-900 mb-1">Telefon</h4>
-                                        <a href="tel:+994123456789" className="text-emerald-600 hover:text-emerald-700 transition-colors">
-                                            +994 12 345 67 89
+                                        <a href="tel:+994553004214" className="text-emerald-600 hover:text-emerald-700 transition-colors">
+                                            +994 55 300 42 14
                                         </a>
                                     </div>
                                 </div>
->>>>>>> 6cc402e48fbe96a2abc93424c417b1f456d16c43
 
                                 <div className="flex items-start gap-4">
                                     <div className="p-3 bg-emerald-100/50 rounded-lg">
