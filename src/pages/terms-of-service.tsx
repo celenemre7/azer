@@ -15,24 +15,23 @@ export default function TermsOfService() {
 
                 {/* İçerik Konteynırı */}
                 <div className="bg-white rounded-2xl shadow-xl ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    {/* Üst Bilgi */}
-                    <div className="bg-indigo-50 px-8 py-6 border-b border-indigo-100">
-                        <h2 className="text-3xl font-bold text-indigo-900 font-serif">
-                            İstifadə Şərtləri
-                            <span className="text-indigo-600 ml-3">·</span>
-                        </h2>
-                    </div>
-
                     {/* İçerik Alanı */}
                     <div className="px-8 py-12 space-y-16">
+                        <div className="prose prose-lg max-w-none">
+                            <p className="text-gray-700 leading-relaxed">
+                                Bu İstifadə Şərtləri ("Şərtlər") Mescid.az mobil tətbiqetməsinin ("Tətbiq") istifadə qaydalarını müəyyən edir. 
+                                Tətbiqi yükləməklə və istifadə etməklə bu Şərtləri qəbul etdiyinizi təsdiq edirsiniz.
+                            </p>
+                        </div>
+
                         <section>
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 font-serif">
                                 1. TƏTBİQİN TƏYİNATI
                             </h3>
                             <p className="text-gray-700 leading-relaxed text-lg">
-                                Mescid.az tətbiqi istifadəçilərə namaz vaxtlarını göstərmək, qiblə
-                                istiqamətini təyin etmək, məscid və namaz otaqlarının xəritəsini
-                                təqdim etmək kimi funksiyalar təklif edir.
+                                Mescid.az tətbiqi istifadəçilərə namaz vaxtlarını göstərmək, qiblə istiqamətini təyin etmək, 
+                                məscid və namaz otaqlarının xəritəsini təqdim etmək, Quran təfsirini oxumaq kimi funksiyalar təklif edir. 
+                                Tətbiq tamamilə pulsuzdur, reklam içərmir və heç bir ödənişli versiyası mövcud deyil.
                             </p>
                         </section>
 
@@ -40,27 +39,89 @@ export default function TermsOfService() {
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 font-serif">
                                 2. NAMAZ VAXTININ HESABLANMASI
                             </h3>
-                            <p className="text-gray-700 leading-relaxed text-lg">
-                                Tətbiqdə təqdim edilən namaz vaxtları Qafqaz Müsəlmanlar İdarəsinin 
-                                hesablamalarına əsaslanır. Mescid.az tətbiqi namaz vaxtlarının 
-                                dəqiqliyinə görə məsuliyyət daşımır.
-                            </p>
+                            <div className="text-gray-700 leading-relaxed text-lg space-y-4">
+                                <p>Tətbiqdə təqdim edilən namaz vaxtları:</p>
+                                <ul className="list-disc pl-6 space-y-2">
+                                    <li>Qafqaz Müsəlmanlar İdarəsinin hesablamalarına əsaslanan vaxtlar</li>
+                                    <li>Muslim World League (Səudiyyə Ərəbistanı) metoduna əsaslanan vaxtlar</li>
+                                </ul>
+                                <p>
+                                    Mescid.az tətbiqi yalnız bu qurumların təqdim etdiyi məlumatları istifadə edir və 
+                                    namaz vaxtlarının dəqiqliyinə görə məsuliyyət daşımır.
+                                </p>
+                            </div>
                         </section>
 
                         <section>
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 font-serif">
-                                3. GPS və BİLDİRİŞ İCAZƏLƏRİ
+                                3. MƏLUMATLARIN TOPLANMASI
+                            </h3>
+                            <div className="text-gray-700 leading-relaxed text-lg space-y-4">
+                                <p>
+                                    Mescid.az tətbiqi istifadəçilərdən şəxsi məlumat toplamır və qeydiyyat tələb etmir. 
+                                    Tətbiq yalnız Firebase analitika vasitəsilə anonim statistik məlumatları toplayır:
+                                </p>
+                                <ul className="list-disc pl-6 space-y-2">
+                                    <li>Tətbiqə neçə istifadəçinin daxil olduğu</li>
+                                    <li>Hansı regionlardan daxil olunduğu</li>
+                                    <li>Tətbiqin hansı cihazlarda və əməliyyat sistemlərində istifadə edildiyi</li>
+                                    <li>Tətbiqin hansı səhifələrinin daha çox istifadə edildiyi</li>
+                                    <li>Potensial səhvlərin və çökmələrin analizi</li>
+                                </ul>
+                                <p>
+                                    Bu məlumatlar yalnız tətbiqin təkmilləşdirilməsi və istifadəçi təcrübəsinin 
+                                    yaxşılaşdırılması üçün istifadə olunur və heç bir üçüncü tərəflə paylaşılmır.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 font-serif">
+                                4. GPS və BİLDİRİŞ İCAZƏLƏRİ
+                            </h3>
+                            <div className="text-gray-700 leading-relaxed text-lg space-y-4">
+                                <p>
+                                    GPS icazəsi tətbiqin xəritə və qiblə funksiyalarının işləməsi üçün tələb olunur. 
+                                    GPS icazəsi verilmədiyi halda bu funksiyalar aktiv olmayacaq.
+                                </p>
+                                <p>
+                                    Bildirişlər namaz vaxtlarını və gündəlik Quran ayələrini istifadəçiyə 
+                                    çatdırmaq üçün istifadə edilir.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 font-serif">
+                                5. ÜÇÜNCÜ TƏRƏF XİDMƏTLƏRİ
+                            </h3>
+                            <div className="text-gray-700 leading-relaxed text-lg space-y-4">
+                                <p>Xəritə funksiyası Google Maps xəritəsi üzərində işləyir.</p>
+                                <p>
+                                    Naviqasiya funksiyası üçün istifadəçilər Yandex Map, Google Maps, Apple Maps və ya 
+                                    Waze kimi xidmətlərə yönləndirilə bilər. Bu xidmətlərdən istifadəyə görə Mescid.az 
+                                    tətbiqi məsuliyyət daşımır.
+                                </p>
+                                <p>
+                                    Quran səhifəsində təqdim olunan məlumatlar Quran.az API-si vasitəsilə təmin edilir.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 font-serif">
+                                6. MƏSULİYYƏTİN MƏHDUDLAŞDIRILMASI
                             </h3>
                             <p className="text-gray-700 leading-relaxed text-lg">
-                                GPS icazəsi tətbiqin xəritə və qiblə funksiyalarının işləməsi üçün
-                                tələb olunur. Bildirişlər namaz vaxtlarını və gündəlik Quran 
-                                ayələrini istifadəçiyə çatdırmaq üçün istifadə edilir.
+                                Mescid.az tətbiqi istifadəçilərə təqdim etdiyi məlumatların tam doğruluğunu və davamlı 
+                                əlçatanlığını təmin etməyə çalışır, lakin bu məlumatların düzgünlüyünə zəmanət vermir və 
+                                istifadə nəticəsində yarana biləcək hər hansı itki və ya zərərə görə məsuliyyət daşımır.
                             </p>
                         </section>
 
                         <section>
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 font-serif">
-                                4. ƏLAQƏ
+                                7. ƏLAQƏ
                             </h3>
                             <p className="text-gray-700 leading-relaxed text-lg">
                                 İstifadəçilər tətbiq daxilində sorğu göndərmə funksiyası və ya{' '}
