@@ -196,7 +196,7 @@ const LocationActions = () => (
       </p>
     </div>
     <a
-      href="https://wa.me/994553004214"
+      href="https://wa.me/994513401040"
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-3 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 rounded-xl transition-all duration-300 group shadow-lg hover:shadow-emerald-400/20"

@@ -90,7 +90,7 @@ const About: NextPage = () => {
                         </Paragraph>
                     </Section>
 
-                    <Section title="Namaz Vakitləri" Icon={FiClock}>
+                    <Section title="Namaz Vaxtları" Icon={FiClock}> 
                         <Paragraph>
                             Mescid.az, iki fərqli namaz təqvimi təqdim edir:
                         </Paragraph>
@@ -137,12 +137,12 @@ const About: NextPage = () => {
                         </h3>
                         <div className="flex flex-col md:flex-row justify-center gap-6 mt-4">
                             <StoreLink
-                                href="https://play.google.com/store/apps/details?id=com.example"
+                                href="https://play.google.com/store/apps/details?id=app.prayertime.mescidaz&hl=az"
                                 src="/play-store.png"
                                 alt="Google Play Store"
                             />
                             <StoreLink
-                                href="https://apps.apple.com/app/example"
+                                href="https://apps.apple.com/az/app/mescid-az-namaz-vaxtlar%C4%B1/id6741332172"
                                 src="/app-store.png"
                                 alt="Apple App Store"
                             />

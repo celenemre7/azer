@@ -179,8 +179,8 @@ export default function Footer() {
               <Link href="/terms-of-service" className="hover:text-white">
                 İstifadə Şərtləri
               </Link>
-              <Link href="/calculation-methods" className="hover:text-white">
-                Hesablama Metodları
+              <Link href="/contact" className="hover:text-white">
+                Əlaqə
               </Link>
             </div>
           </div>
